@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import {AppBar, Box, Toolbar, Typography, Avatar, Grid, Button} from "@mui/material";
+import {AppBar, Box, Toolbar, Typography, Avatar } from "@mui/material";
 import {Twitter} from "@mui/icons-material";
 import SignOutButton from "./SignOutButton";
 
