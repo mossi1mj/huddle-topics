@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection } from "firebase/firestore";
+import { getFirestore, collection, query, orderBy } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth"
 
 const firebaseConfig = {
@@ -14,10 +14,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
+export const db = getFirestore(app);
 
 export const messagesRef = collection(db, "messages");
+export const order = query(messagesRef, orderBy('createdOn', 'desc'))
 export const provider = new GoogleAuthProvider();
 export const auth = getAuth(app);
 export const googleLogin = () => {

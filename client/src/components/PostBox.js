@@ -15,7 +15,8 @@ const PostBox = () => {
             description: description,
             createdBy: auth.currentUser.displayName,
             createdOn: serverTimestamp(),
-            avatar: auth.currentUser.photoURL
+            avatar: auth.currentUser.photoURL,
+            id: auth.currentUser.uid
         });
         setTitle('');
         setDescription('');
