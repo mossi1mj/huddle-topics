@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import { onSnapshot } from 'firebase/firestore'
 import {order} from "../firebase";
-import {Container, Grid} from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Message from "./Message";
 
 const Feed = () => {
@@ -18,10 +18,15 @@ const Feed = () => {
         })
     }, [])
 
+
     return (
-        <div>
-            Test
-        </div>
+        <Box>
+            { cards.map(msg => (
+                <Container key={msg.id}>
+                        <Message message={msg} />
+                </Container>
+            )) }
+        </Box>
     )
 }
 

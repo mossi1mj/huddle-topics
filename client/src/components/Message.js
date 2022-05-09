@@ -47,9 +47,6 @@ const Message = ({ message }) => {
               }}
           >
               <li>
-                  { message.createdOn }
-              </li>
-              <li>
                   { message.createdBy }
               </li>
           </ul>
